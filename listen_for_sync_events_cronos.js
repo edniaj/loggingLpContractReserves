@@ -29,7 +29,7 @@ const init = async () => {
                 contractPlaceholder = await createLPContract(addressHash)
                 filterPairs = contractPlaceholder.filters.Sync()                        // Create filter for event sync()
                 await contractPlaceholder.queryFilter(filterPairs,i-9999,i).then( (r) => {  // Query only for 10,000 block
-                    lpPairDict[addressHash].push(r) // Push the transaction into the dictionary, read Line 15 for mor einfo
+                    lpPairDict[addressHash].push(r) // Push the transaction into the dictionary, read Line 15 for more info
                 })
             }catch(err){
                 console.log(`${i-9999} to ${i}`)  // Print out the block that went wrong
