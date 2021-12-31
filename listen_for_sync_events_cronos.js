@@ -63,7 +63,6 @@ const init = async () => {
     for (let i = blockNumber; i>0;) {
         for (let j in lpPairList){
             promiseList.push(getQuery(i,lpPairList[j]))  // Push promise into promiseList 
-            break
         }
         i -= 9999;
     }
